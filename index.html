@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTech Solutions | O Futuro do Campo</title>
+    <style>
+        /* Configurações Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --verde-principal: #1b4d3e;
+            --verde-destaque: #2ecc71;
+            --cinza-escuro: #2c3e50;
+            --cinza-claro: #f4f6f6;
+            --cinza-borda: #bdc3c7;
+            --branco: #ffffff;
+        }
+
+        body {
+            background-color: var(--cinza-claro);
+            color: var(--cinza-escuro);
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: var(--verde-principal);
+            color: var(--branco);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--verde-destaque);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Container Principal */
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Títulos das Seções */
+        section h2 {
+            font-size: 2rem;
+            color: var(--verde-principal);
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--verde-destaque);
+            border-radius: 2px;
+        }
+
+        /* Grid de Quadrados (Cards) */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* Estilo dos Quadrados */
+        .card {
+            background-color: var(--branco);
+            border: 1px solid var(--cinza-borda);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(27, 77, 62, 0.15);
+            border-color: var(--verde-destaque);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            color: var(--verde-principal);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #555;
+            flex-grow: 1;
+        }
+
+        /* Destaque para os cards de colheita (borda lateral cinza escura) */
+        .card-colheita {
+            border-left: 5px solid var(--cinza-escuro);
+        }
+
+        /* Destaque para os cards de tecnologia (borda lateral verde) */
+        .card-tecnologia {
+            border-left: 5px solid var(--verde-principal);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--cinza-escuro);
+            color: var(--branco);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        footer p strong {
+            color: var(--verde-destaque);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .grid-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho Corporativo -->
+    <header>
+        <h1>AGROTECH SOLUTIONS</h1>
+        <p>Inovação de Alta Performance para o Agronegócio Moderno</p>
+    </header>
+
+    <main>
+        
+        <!-- Seção de Tecnologias -->
+        <section id="tecnologias">
+            <h2>Tecnologias de Ponta</h2>
+            <div class="grid-container">
+                
+                <div class="card card-tecnologia">
+                    <h3>Drones de Pulverização</h3>
+                    <p>Equipamentos aéreos autônomos que aplicam defensivos agrícolas e fertilizantes com precisão milimétrica. Reduzem o desperdício de insumos em até 30% e evitam a compactação do solo causada por tratores pesados.</p>
+                </div>
+
+                <div class="card card-tecnologia">
+                    <h3>Sensores IoT no Solo</h3>
+                    <p>Dispositivos conectados que medem a umidade, temperatura e nutrientes da terra em tempo real. Os dados são enviados para a nuvem, permitindo que o produtor saiba exatamente quando e quanto irrigar.</p>
+                </div>
+
+                <div class="card card-tecnologia">
+                    <h3>Inteligência Artificial (IA)</h3>
+                    <p>Algoritmos avançados que analisam imagens de satélite e fotos de folhas para identificar pragas, doenças ou estresse hídrico antes que o problema se espalhe, emitindo alertas automáticos para o manejo.</p>
+                </div>
+
+                <div class="card card-tecnologia">
+                    <h3>Telemetria de Maquinários</h3>
+                    <p>Sistemas integrados a tratores e colheitadeiras que monitoram o rendimento do combustível, velocidade de operação e desgaste de peças. Garante máxima eficiência mecânica e automação de frotas.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Seção de Colheitas -->
+        <section id="colheitas">
+            <h2>Gestão Estratégica de Colheitas</h2>
+            <div class="grid-container">
+                
+                <div class="card card-colheita">
+                    <h3>Mapeamento de Produtividade</h3>
+                    <p>Geração de mapas visuais durante a colheita que mostram quais áreas do campo renderam mais ou menos sacas. Essencial para corrigir falhas do solo no próximo ciclo de plantio.</p>
+                </div>
+
+                <div class="card card-colheita">
+                    <h3>Janela Ótima de Colheita</h3>
+                    <p>Cruzamento de dados climáticos e índices de maturação da planta para determinar o dia exato do início da colheita. Evita perdas por chuvas imprevistas ou grãos passados do ponto.</p>
+                </div>
+
+                <div class="card card-colheita">
+                    <h3>Rastreabilidade Total</h3>
+                    <p>Registro tecnológico de todo o trajeto do grão, desde o momento em que é colhido até o armazenamento nos silos. Garante o padrão exigido pelo mercado internacional e auditorias.</p>
+                </div>
+
+                <div class="card card-colheita">
+                    <h3>Logística Integrada</h3>
+                    <p>Sincronização entre o ritmo das colheitadeiras no campo e a chegada dos caminhões de transbordo. Elimina o tempo ocioso das máquinas e otimiza o escoamento da produção.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 AgroTech Solutions. Todos os direitos reservados.</p>
+        <p>Tecnologia aplicada à sustentabilidade e lucratividade no campo. Powered by <strong>GitHub Pages</strong>.</p>
+    </footer>
+
+</body>
+</html>
